@@ -18,8 +18,8 @@ build-front:
 	cd web && grunt build
 
 install_deps:
-	./install_tools.sh
-	./install_neo4j.sh
+	sudo ./install_tools.sh
+	sudo ./install_neo4j.sh
 	./install_pypy.sh
 	./install_js.sh
 	touch install_deps
