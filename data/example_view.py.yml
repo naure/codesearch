@@ -1,0 +1,440 @@
+__rel__: &id001
+  body:
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id009 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id002 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: django.shortcuts.render
+              ext_name_n: django.shortcuts.render
+            : null
+          scope:
+          - &id003 !!python/object:codesearch.ogm.OG
+            __rel__: *id001
+            filename: data/example_view.py
+            lineend: 0
+            ntype: Module
+            project: test
+            schema_rev: 1
+            scope: true
+            version: '0.1'
+        name: render
+        nname: render
+      exts:
+      - *id002
+    lineend: 1
+    lineno: 1
+    ntype: ImportFrom
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id020 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id004 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: django.http.HttpResponse
+              ext_name_n: django.http.httpresponse
+            : null
+          scope:
+          - *id003
+        name: HttpResponse
+        nname: httpresponse
+      exts:
+      - *id004
+    lineend: 2
+    lineno: 2
+    ntype: ImportFrom
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id021 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id005 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: json
+              ext_name_n: json
+            : null
+          scope:
+          - *id003
+        name: json
+        nname: json
+      exts:
+      - *id005
+    lineend: 3
+    lineno: 3
+    ntype: Import
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id014 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id006 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: codesearch.codesearch
+              ext_name_n: codesearch.codesearch
+            : null
+          scope:
+          - *id003
+        name: codesearch
+        nname: codesearch
+      exts:
+      - *id006
+    lineend: 5
+    lineno: 5
+    ntype: ImportFrom
+  - &id007 !!python/object:codesearch.ogm.OG
+    __rel__:
+      args:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id008 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id007
+            name: request
+            nname: request
+        lineend: 8
+        ntype: arguments
+      body:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id010 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id003
+            name: home_view
+            nname: homeview
+          uses:
+          - *id008
+          - *id009
+        lineend: 13
+        lineno: 9
+        ntype: Return
+      defs:
+      - *id010
+    lineend: 8
+    lineno: 8
+    ntype: FunctionDef
+    scope: true
+  - &id011 !!python/object:codesearch.ogm.OG
+    __rel__:
+      args:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id012 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: request
+            nname: request
+        lineend: 18
+        ntype: arguments
+      body:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          atts:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              attr_of: []
+            attr: GET
+            nattr: get
+          defs:
+          - &id013 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: q
+            nname: q
+          uses:
+          - *id012
+        lineend: 19
+        lineno: 19
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          atts:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              attr_of: []
+            attr: search_deep
+            nattr: searchdeep
+          defs:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: res
+            nname: res
+          - &id015 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: out
+            nname: out
+          uses:
+          - *id013
+          - *id014
+        lineend: 20
+        lineno: 20
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id016 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id003
+            name: rendered_search_view
+            nname: renderedsearchview
+          uses:
+          - *id012
+          - *id009
+          - *id015
+        lineend: 26
+        lineno: 21
+        ntype: Return
+      defs:
+      - *id016
+    lineend: 18
+    lineno: 18
+    ntype: FunctionDef
+    scope: true
+  - &id017 !!python/object:codesearch.ogm.OG
+    __rel__:
+      args:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id018 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id017
+            name: request
+            nname: request
+        lineend: 31
+        ntype: arguments
+      body:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          atts:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              attr_of: []
+            attr: GET
+            nattr: get
+          defs:
+          - &id019 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id017
+            name: q
+            nname: q
+          uses:
+          - *id018
+        lineend: 32
+        lineno: 32
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          atts:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              attr_of: []
+            attr: search_deep
+            nattr: searchdeep
+          defs:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id017
+            name: res
+            nname: res
+          - &id022 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id017
+            name: out
+            nname: out
+          uses:
+          - *id019
+          - *id014
+        lineend: 33
+        lineno: 33
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          atts:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              attr_of: []
+            attr: dumps
+            nattr: dumps
+          defs:
+          - &id023 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id017
+            name: response
+            nname: response
+          uses:
+          - *id020
+          - *id021
+          - *id022
+        lineend: 34
+        lineno: 34
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id024 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id003
+            name: search
+            nname: search
+          uses:
+          - *id023
+        lineend: 35
+        lineno: 35
+        ntype: Return
+      defs:
+      - *id024
+    lineend: 31
+    lineno: 31
+    ntype: FunctionDef
+    scope: true
+  - &id025 !!python/object:codesearch.ogm.OG
+    __rel__:
+      args:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id026 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id025
+            name: what
+            nname: what
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id025
+            name: request
+            nname: request
+          - &id028 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id025
+            name: nid
+            nname: nid
+        lineend: 38
+        ntype: arguments
+      body:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id027 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id025
+            name: mid
+            nname: mid
+          uses:
+          - *id026
+        lineend: 39
+        lineno: 39
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id029 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id025
+            name: out
+            nname: out
+          uses:
+          - *id026
+          - *id027
+          - *id028
+        lineend: 41
+        lineno: 40
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          atts:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              attr_of: []
+            attr: dumps
+            nattr: dumps
+          defs:
+          - &id030 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id003
+            name: more
+            nname: more
+          uses:
+          - *id020
+          - *id021
+          - *id029
+        lineend: 43
+        lineno: 43
+        ntype: Return
+      defs:
+      - *id030
+    lineend: 38
+    lineno: 38
+    ntype: FunctionDef
+    scope: true
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      body:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id031 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id003
+            name: results
+            nname: results
+          uses:
+          - *id024
+        lineend: 47
+        lineno: 47
+        ntype: Assign
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          uses:
+          - *id031
+        lineend: 48
+        lineno: 48
+        ntype: Print
+      uses:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - *id003
+        name: __name__
+        nname: name
+    lineend: 46
+    lineno: 46
+    ntype: If
+filename: data/example_view.py
+lineend: 0
+ntype: Module
+project: test
+schema_rev: 1
+scope: true
+version: '0.1'

@@ -1,0 +1,108 @@
+__rel__: &id001
+  body:
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id003 !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - &id002 !!python/object:codesearch.ogm.OG
+            __rel__: *id001
+            filename: data/example_mini.py
+            lineend: 0
+            ntype: Module
+            project: test
+            schema_rev: 1
+            scope: true
+            version: '0.1'
+        name: a
+        nname: a
+    lineend: 1
+    lineno: 1
+    ntype: Assign
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id004 !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - *id002
+        name: b
+        nname: b
+      uses:
+      - *id003
+    lineend: 2
+    lineno: 2
+    ntype: Assign
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id006 !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - *id002
+        name: c
+        nname: c
+      uses:
+      - *id004
+    lineend: 3
+    lineno: 3
+    ntype: Assign
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id005 !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - *id002
+        name: cc
+        nname: cc
+      uses:
+      - *id003
+    lineend: 4
+    lineno: 4
+    ntype: Assign
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id007 !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - *id002
+        name: d
+        nname: d
+      uses:
+      - *id005
+      - *id006
+    lineend: 5
+    lineno: 5
+    ntype: Assign
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id008 !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - *id002
+        name: e
+        nname: e
+      uses:
+      - *id003
+      - *id007
+    lineend: 6
+    lineno: 6
+    ntype: Assign
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      uses:
+      - *id008
+    lineend: 7
+    lineno: 7
+    ntype: Print
+filename: data/example_mini.py
+lineend: 0
+ntype: Module
+project: test
+schema_rev: 1
+scope: true
+version: '0.1'

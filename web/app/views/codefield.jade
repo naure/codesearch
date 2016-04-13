@@ -1,0 +1,5 @@
+doctype html
+
+pre: code(ng-bind-html="highlight(makesnippet(), name)")
+//pre: code
+  {{ makesnippet() | highlight: name }}

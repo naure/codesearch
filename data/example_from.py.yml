@@ -1,0 +1,99 @@
+__rel__: &id001
+  body:
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id003 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id002 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: root
+              ext_name_n: root
+            : null
+          scope:
+          - &id004 !!python/object:codesearch.ogm.OG
+            __rel__: *id001
+            filename: data/example_from.py
+            lineend: 0
+            ntype: Module
+            project: test
+            schema_rev: 1
+            scope: true
+            version: '0.1'
+        name: root
+        nname: root
+      exts:
+      - *id002
+    lineend: 2
+    lineno: 2
+    ntype: Import
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - *id003
+      exts:
+      - *id002
+    lineend: 3
+    lineno: 3
+    ntype: Import
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id005 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: root.sub
+              ext_name_n: root.sub
+            : null
+          scope:
+          - *id004
+        name: sub
+        nname: sub
+      exts:
+      - *id005
+    lineend: 4
+    lineno: 4
+    ntype: ImportFrom
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id006 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: root.sub.stuff
+              ext_name_n: root.sub.stuff
+            : null
+          scope:
+          - *id004
+        name: stuff
+        nname: stuff
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id007 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: root.sub.trucs
+              ext_name_n: root.sub.trucs
+            : null
+          scope:
+          - *id004
+        name: trucs
+        nname: trucs
+      exts:
+      - *id006
+      - *id007
+    lineend: 5
+    lineno: 5
+    ntype: ImportFrom
+filename: data/example_from.py
+lineend: 0
+ntype: Module
+project: test
+schema_rev: 1
+scope: true
+version: '0.1'

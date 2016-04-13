@@ -5,7 +5,7 @@ A code search engine that actually analyzes and follows the code.
 # Run
 
     # Install neo4j and necessary utilities
-    make install_tools
+    make install_deps
     # Process sample data
     make analyse
     # Serve the backend

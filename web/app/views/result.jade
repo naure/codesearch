@@ -1,0 +1,23 @@
+h4(ng-click="show_source = !show_source")
+  | Project {{ res.project |name }}, file {{ res.filename |name }}
+  |  
+  button.btn.btn-default.btn-xs {{ show_source ? "Hide" : "Show" }} source
+hljs(ng-if="show_source" source="source_lines.join('\n')")
+
+// p(ng-if="last_def_id != null || last_pro_id != null")
+p
+  prevnext(length="res.defs.length", nodei="def_i")
+    | assignement
+  |  
+  prevnext(length="res.uses.length", nodei="use_i")
+    | usage
+  |  
+  button.btn.btn-success.btn-sm(ng-click="moredef(last_def_id)", ng-disabled="last_def_id == null")
+    | More assignements
+  |  
+  button.btn.btn-danger.btn-sm(ng-click="morepro(last_pro_id)", ng-disabled="last_pro_id == null")
+    | More products
+
+// Code snippet
+codefieldwhy(sourcelines="source_lines", linesreasons="linesreasons",
+             namesroles="namesroles")

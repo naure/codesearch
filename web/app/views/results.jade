@@ -1,0 +1,10 @@
+//h3 Selected code
+  pre {{ editor }}
+  a(ng-click="clearEditor()") Clear
+
+h3 {{ query |name }}
+  small  ({{ results.summary }})
+
+ul
+  li(ng-repeat="res in results.results" ng-controller="ResultCtrl")
+    result

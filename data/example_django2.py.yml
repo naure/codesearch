@@ -1,0 +1,268 @@
+__rel__: &id001
+  body:
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id021 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id002 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: django.conf.settings
+              ext_name_n: django.conf.settings
+            : null
+          scope:
+          - &id003 !!python/object:codesearch.ogm.OG
+            __rel__: *id001
+            filename: data/example_django2.py
+            lineend: 0
+            ntype: Module
+            project: test
+            schema_rev: 1
+            scope: true
+            version: '0.1'
+        name: settings
+        nname: settings
+      exts:
+      - *id002
+    lineend: 1
+    lineno: 1
+    ntype: ImportFrom
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id017 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id004 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: django.conf.urls.include
+              ext_name_n: django.conf.urls.include
+            : null
+          scope:
+          - *id003
+        name: include
+        nname: include
+      - &id013 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id005 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: django.conf.urls.patterns
+              ext_name_n: django.conf.urls.patterns
+            : null
+          scope:
+          - *id003
+        name: patterns
+        nname: patterns
+      - &id014 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id006 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: django.conf.urls.url
+              ext_name_n: django.conf.urls.url
+            : null
+          scope:
+          - *id003
+        name: url
+        nname: url
+      exts:
+      - *id004
+      - *id005
+      - *id006
+    lineend: 2
+    lineno: 2
+    ntype: ImportFrom
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id015 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id007 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: django.contrib.auth.decorators.login_required
+              ext_name_n: django.contrib.auth.decorators.loginrequired
+            : null
+          scope:
+          - *id003
+        name: login_required
+        nname: loginrequired
+      exts:
+      - *id007
+    lineend: 3
+    lineno: 3
+    ntype: ImportFrom
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      defs:
+      - &id022 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id008 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: loginfront.views.login_view
+              ext_name_n: loginfront.views.loginview
+            : null
+          scope:
+          - *id003
+        name: login_view
+        nname: loginview
+      - &id020 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id009 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: loginfront.views.logout_view
+              ext_name_n: loginfront.views.logoutview
+            : null
+          scope:
+          - *id003
+        name: logout_view
+        nname: logoutview
+      - &id016 !!python/object:codesearch.ogm.OG
+        __rel__:
+          module: !!set
+            ? &id010 !!python/object:codesearch.ogm.OG
+              __rel__: {}
+              ext_name: loginfront.views.forward_view
+              ext_name_n: loginfront.views.forwardview
+            : null
+          scope:
+          - *id003
+        name: forward_view
+        nname: forwardview
+      exts:
+      - *id008
+      - *id009
+      - *id010
+    lineend: 4
+    lineno: 4
+    ntype: ImportFrom
+  - &id011 !!python/object:codesearch.ogm.OG
+    __rel__:
+      args:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id012 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: upstream_servers
+            nname: upstreamservers
+          - &id018 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: require_auth
+            nname: requireauth
+          uses:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: 'True'
+            nname: 'true'
+        lineend: 7
+        ntype: arguments
+      body:
+      - !!python/object:codesearch.ogm.OG
+        __rel__: {}
+        lineend: 8
+        lineno: 8
+        ntype: Expr
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          body:
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              uses:
+              - !!python/object:codesearch.ogm.OG
+                __rel__:
+                  scope:
+                  - *id011
+                name: ValueError
+                nname: valueerror
+            lineend: 10
+            lineno: 10
+            ntype: Raise
+          uses:
+          - *id012
+        lineend: 9
+        lineno: 9
+        ntype: If
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          defs:
+          - &id019 !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id003
+            name: forward_to
+            nname: forwardto
+          uses:
+          - *id013
+          - *id014
+          - *id015
+          - *id016
+          - *id012
+          - !!python/object:codesearch.ogm.OG
+            __rel__:
+              scope:
+              - *id011
+            name: kwargs
+            nname: kwargs
+          - *id017
+          - *id018
+        lineend: 17
+        lineno: 11
+        ntype: Return
+      defs:
+      - *id019
+    lineend: 7
+    lineno: 7
+    ntype: FunctionDef
+    scope: true
+  - !!python/object:codesearch.ogm.OG
+    __rel__:
+      atts:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          attr_of: []
+        attr: FORWARD_URLS
+        nattr: forwardurls
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          attr_of: []
+        attr: LOGIN_URL
+        nattr: loginurl
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          attr_of: []
+        attr: SITE_TITLE
+        nattr: sitetitle
+      defs:
+      - !!python/object:codesearch.ogm.OG
+        __rel__:
+          scope:
+          - *id003
+        name: urlpatterns
+        nname: urlpatterns
+      uses:
+      - *id014
+      - *id020
+      - *id021
+      - *id013
+      - *id022
+    lineend: 37
+    lineno: 22
+    ntype: Assign
+filename: data/example_django2.py
+lineend: 0
+ntype: Module
+project: test
+schema_rev: 1
+scope: true
+version: '0.1'

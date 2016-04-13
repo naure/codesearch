@@ -1,0 +1,7 @@
+doctype html
+form.form-inline(ng-submit="search()", role="form")
+  div.form-group
+    input.form-control(ng-model="query", type="text", placeholder="...", required, autofocus)
+  |  
+  button.btn.btn-primary(type="submit")
+    | Search

@@ -1,0 +1,27 @@
+doctype html
+
+style.
+      .nopad {padding: 0; margin: 0;}
+      .line {line-height: 1.5em;}
+      .front-col {width: 1.5em;}
+
+      .use {color: rgb(38, 33, 156); font-weight:bold;}
+      .use-line {background-color: rgb(38, 33, 156);}
+      .def{color: rgb(49, 168, 27);}
+      .def-line {background-color: rgb(49, 168, 27);}
+      .pro {color: rgb(202, 0, 0);}
+      .pro-line {background-color: rgb(202, 0, 0);}
+      .hel {color: rgb(6, 187, 187);}
+      .hel-line {background-color: rgb(6, 187, 187);}
+      .sco-line {background-color: rgb(139, 35, 139);}
+
+div.container: div.row
+  pre.col-md-1.nopad.front-col
+    p.nopad(ng-repeat="lr in linesreasons track by $index",
+    class="{{ getclass(lr) }}-line")
+      span.line.front
+        |  
+
+  pre.col-md-11
+    p.nopad(ng-repeat="lr in linesreasons track by $index")
+      span.line(ng-bind-html="highlight(getline(lr))")

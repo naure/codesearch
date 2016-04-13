@@ -1,0 +1,11 @@
+doctype html
+
+span(ng-if="length > 1")
+  button.btn.btn-default.btn-sm(ng-click="prev()", ng-disabled="nodei <= 0")
+    | &#9668 Previous 
+    span(ng-transclude)
+  |  {{ nodei + 1 }} / {{ length }} 
+  button.btn.btn-default.btn-sm(ng-click="next()", ng-disabled="nodei >= length - 1")
+    | Next 
+    span(ng-transclude)
+    | &#9658
