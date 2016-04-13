@@ -3,7 +3,7 @@ set -e
 
 apt-get install \
     wget make nginx \
-    nodejs \
+    nodejs npm \
     python-pip python-dev \
     python-yaml python-django \
     ;
