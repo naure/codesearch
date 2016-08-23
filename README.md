@@ -6,6 +6,12 @@ It finds lines of code based on a query, then builds complete snippets
 by adding the dependencies and dependents of that code, for instance keeping
 variable declarations and usages together.
 
+Searching for a function name will show several examples of usage. The
+code snippets are (mostly) valid and ready to be copy-pasted. They include imports and
+constants, show where parameters are typically taken from, and what can be
+done with the output of the function. Relevant parts are color-coded,
+and more code can be digged out on demand.
+
 ## Run
 
 The following will install neo4j, nodejs and other tools, and build the project. Assuming an ubuntu server.
