@@ -26,7 +26,7 @@ MATCH
 USING INDEX nn:code(nname)
 WHERE
     nn.nname = { nname } AND
-    has(file.filename)
+    exists(file.filename)
 WITH file, nn, scope
   MATCH (nn)<-[:defs]-(def)
   OPTIONAL MATCH

@@ -49,7 +49,7 @@ match path =
     (use) <-[*..20]- (scope {scope: True}) -[rdefs *0..6]-> (def)
     where "%s" in def.defs
     // Rewrite this with shortestPath?
-    and none(rdef in rdefs where has(endNode(rdef).scope) and endNode(rdef) <> def)
+    and none(rdef in rdefs where exists(endNode(rdef).scope) and endNode(rdef) <> def)
 return def, scope, path
 '''
 
@@ -67,7 +67,7 @@ match path =
     where "%s" in use.uses
     and use.lineno > def.lineno
     // Rewrite this with shortestPath?
-    and none(rdef in rdefs where has(endNode(rdef).scope) and endNode(rdef) <> def)
+    and none(rdef in rdefs where exists(endNode(rdef).scope) and endNode(rdef) <> def)
 return use, scope, path order by use.lineno limit 1
 '''
 
@@ -80,7 +80,7 @@ def find_use_from_def_old(nid, name):
 # Find named attributes (or key in a container). Dependency: their parent or container.
 q_attr = '''
 match path = (use:code {attr: "%s"}) --> (def:code)
-match (file)-[*]->(use) where has(file.filename)
+match (file)-[*]->(use) where exists(file.filename)
 return file, use.attr as name, use, def, path
 '''
 
@@ -98,7 +98,7 @@ def find_attr(attr):
 q_friends = '''
 start center=node(%i)
 match path = (center)-[rels *1..%i]-(n)
-where none(r in rels where has(startNode(r).stmt))
+where none(r in rels where exists(startNode(r).stmt))
 return n, length(path) as len
 '''
 
@@ -122,9 +122,9 @@ q_products = '''
 start n=node(%i)
 match path =
     (n) <-[ups *0..%i]- (stmt {stmt: true}) -[downs *0..2]-> (def)
-    where has(def.defs)
-    and none(r in ups where has(endNode(r).stmt) and endNode(r).ntype <> "Return")
-    and none(r in downs where has(endNode(r).stmt))  // Maybe unnecessary
+    where exists(def.defs)
+    and none(r in ups where exists(endNode(r).stmt) and endNode(r).ntype <> "Return")
+    and none(r in downs where exists(endNode(r).stmt))  // Maybe unnecessary
 return def, stmt, path limit 1
 '''
 
