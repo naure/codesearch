@@ -12,6 +12,27 @@ constants, show where parameters are typically taken from, and what can be
 done with the output of the function. Relevant parts are color-coded,
 and more code can be digged out on demand.
 
+## Examples
+
+Let's search for *http response*. We get example snippets generated dynamically. They contain the necessary dependencies in blue - here the imports of *HttpResponse* and *json*, and the *out* variable.
+
+We can also follow the impact of this statement in red: for example *return response*, then a call to this particular function.
+
+![](pic/example_django.png?raw=true "Search Results")
+
+
+The "More" buttons can expand the snippets further if necessary to understand or reuse the snippet:
+
+![](pic/request_1.png?raw=true "Minimal Snippet")
+
+![](pic/request_2.png?raw=true "Developed Snippet")
+
+## How it works
+
+The source code is analyzed using a parser, extracting data from ASTs, honoring the scoping rules to find dependencies and impacts, and loading the results into a graph database.
+
+The search engine finds statements and walks the graph from there.
+
 ## Run
 
 The following will install neo4j, nodejs and other tools, and build the project. Assuming an ubuntu server.
